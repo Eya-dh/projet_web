@@ -1,0 +1,220 @@
+/* Section menu */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+/* Section de recherche */
+section {
+   width: 100%;
+   height: 100vh;
+   background-image: url(''); /* Image de fond */
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+section nav {
+   display: flex;
+   justify-content: space-between; /* Espacement entre logo et formulaire */
+   align-items: center;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 70px;
+   background: #fff; /* Couleur blanche */
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ombre */
+   z-index: 1000; /* Superposition au-dessus du contenu */
+   padding: 10px 50px; /* Espacement interne */
+}
+
+section nav .logo img {
+   height: 70px; /* Taille de l'image du logo */
+   width: 100px;
+   cursor: pointer; /* Pointeur clic sur le logo */
+   margin: 7px 0;
+}
+
+/* Style de la barre de navigation */
+section nav .icon {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+/* Style du formulaire de recherche */
+section nav .icon form {
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 300px;
+   border-radius: 25px;
+   overflow: hidden;
+   border: 2px solid #9f31fa; /* Bordure de couleur */
+   background-color: #fff;
+   transition: border-color 0.3s ease;
+}
+
+section nav .icon form input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 25px;
+   outline: none;
+   font-size: 16px;
+   color: #333;
+   transition: background-color 0.3s ease;
+}
+
+section nav .icon form input[type="text"]:focus {
+   background-color: #f1f1f1; /* Changer la couleur de fond lorsqu'il est actif */
+}
+
+section nav .icon form button {
+   padding: 10px 13px;
+   border: none;
+   background-color: #9f31fa;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 50%;
+   position: absolute;
+   right: 0;
+   top: 0;
+   transition: background-color 0.3s ease;
+}
+
+section nav .icon form button:hover {
+   background-color: #7a24b8; /* Changer la couleur au survol */
+}
+
+section nav .icon form button i {
+   font-size: 15px;
+}
+
+/* Effet au survol du champ de recherche */
+section nav .icon form input[type="text"]:focus + button {
+   background-color: #7a24b8; /* Changer la couleur du bouton au focus */
+}
+
+section nav .icon form input[type="text"]:focus {
+   border-color: #7a24b8; /* Changer la bordure au focus */
+}
+
+
+
+.menu {
+   width: 100%;
+   padding: 50px 13px;
+}
+
+.menu h1 {
+   font-size: 55px;
+   font-family: mv boli;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 40px;
+   padding: 30px;
+}
+
+.menu h1 span {
+   color: #9531fa;
+   margin-left: 15px;
+   font-family: mv boli;
+}
+
+.menu h1 span::after {
+   content: '';
+   width: 100%;
+   height: 2px;
+   background: #9f31fa;
+   display: block;
+   position: relative;
+   bottom: 15px;
+}
+
+.menu .menu_box {
+   width: 95%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr); /* 5 colonnes, modifiez selon vos besoins */
+   grid-gap: 15px; /* Espacement entre les cartes */
+   justify-items: center; /* Centre chaque produit horizontalement */
+}
+
+.menu .menu_box .menu_card {
+   width: 225px;
+   height: 345px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   text-align: center;
+   padding-top: 10px;
+   margin-bottom: 20px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.4);
+   border-radius: 5%;
+}
+
+.menu .menu_box .menu_card .menu_image {
+   width: 160px;
+   height: 170px;
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+   transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .menu_info h4 {
+   width: auto;
+   text-align: center;
+   margin: 10px 0;
+   font-size: 20px;
+   color: #ba31fa;
+}
+
+.menu .menu_box .menu_card .menu_info p {
+   text-align: center;
+   margin-top: 8px;
+   line-height: 18px;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+   text-align: center;
+   margin-top: 10px;
+   font-size: 24px;
+   color: #333;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+   height: 40px;
+   width: 130px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   color: white;
+   background: #000000;
+   padding: 8px 10px;
+   margin: 10px auto;
+   transition: 0.3s;
+   border-radius: 3px;
+}

@@ -1,0 +1,301 @@
+/* Style for Header */
+header {
+   display: flex;
+   justify-content: space-between;  /* Espacement entre le titre et le lien */
+   align-items: center;  /* Centrer verticalement les éléments */
+   padding: 20px 0;  /* Espacement autour du header */
+   background-color: #f8f8f8;  /* Couleur de fond claire */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Ombre discrète sous le header */
+}
+
+header h1 {
+   font-size: 28px;  /* Taille du titre */
+   color: #333;  /* Couleur sombre pour le texte */
+   margin: 0;  /* Enlever les marges par défaut */
+}
+
+header a {
+   font-size: 18px;  /* Taille de police du lien */
+   color: #9531fa;  /* Couleur du lien verte */
+   text-decoration: none;  /* Supprimer le soulignement */
+   font-weight: bold;  /* Mettre le lien en gras */
+}
+
+header a:hover {
+   color: #9531fa;  /* Couleur du lien au survol */
+}
+
+nav {
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   padding: 0px 2px;
+   background: rgba(255, 255, 255, 0.9);
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+}
+
+nav .user-profile h3 {
+   margin: 0; /* Supprime les marges par défaut autour du <h3> */
+   padding: 0; /* Supprime les paddings si présents */
+}
+
+nav .user-profile h3 span{
+   
+   font-size: 35px;
+   font-family: mv boli ,sans-serif;
+   display: flex;
+   align-items:flex-start;
+   justify-content:flex-start;
+   padding: 0;
+
+}
+
+nav .logout-btn {
+   width: 40px;
+   height: 40px;
+   background: #ba31fa;
+   color: white;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+   text-decoration: none;
+   transition: background 0.3s, transform 0.3s;
+
+}
+
+nav .logout-btn:hover {
+   background: #ffffff;
+   transform: scale(1.1);
+}
+
+nav .logout-btn i {
+   transform: translateX(-5px); /* Déplace l'icône vers la gauche */
+}
+
+
+section#Home {
+   margin-top: 80px;
+}
+
+
+nav ul {
+   list-style: none;
+   display: flex;
+   gap: 30px;
+}
+
+nav ul li a {
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+   font-size: 18px;
+   transition: color 0.3s;
+}
+
+nav ul li a:hover {
+   color: #9531fa;
+}
+
+.logo img {
+   width: 100px;
+   height: 70px;
+}
+
+.icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+
+.icon form {
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 300px;
+   border-radius: 25px;
+   overflow: hidden;
+   border: 2px solid #9f31fa;
+   background-color: #fff;
+   transition: border-color 0.3s ease;
+}
+
+.icon form input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 22px;
+   outline: none;
+   font-size: 16px;
+   color: #333;
+   transition: background-color 0.3s ease;
+}
+
+.icon form input[type="text"]:focus {
+   background-color: #f1f1f1;
+}
+
+.icon form button {
+   padding: 12px 10px;
+   border: none;
+   background-color: #9f31fa;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 50%;
+   position: absolute;
+   right: 0;
+   top: 0;
+   transition: background-color 0.3s ease;
+}
+
+.icon form button:hover {
+   background-color: #7a24b8;
+}
+
+.icon form button i {
+   font-size: 15px;
+}
+
+.icon form input[type="text"]:focus + button {
+   background-color: #7a24b8;
+}
+
+.icon form input[type="text"]:focus {
+   border-color: #7a24b8;
+}
+
+.icon a,
+.icon button {
+   color: rgb(153, 0, 255);
+   font-size: 24px;
+   background: none;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: color 0.3s;
+}
+
+.icon a:hover,
+.icon button:hover {
+   color: #9531fa;
+}
+
+
+.menu {
+   width: 100%;
+   padding: 50px 3px;
+}
+
+.menu h1 {
+   font-size: 55px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 30px;
+}
+
+.menu h1 span {
+   color: #9531fa;
+   margin-left: 15px;
+   font-family: mv boli;
+}
+
+.menu h1 span::after {
+   content: '';
+   width: 100%;
+   height: 2px;
+   background: #9f31fa;
+   display: block;
+   position: relative;
+   bottom: 15px;
+}
+
+.menu .menu_box {
+   width: 95%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr); /* 5 columns, modify as needed */
+   grid-gap: 15px; /* Space between the cards */
+   justify-items: center; /* Center each product horizontally */
+}
+
+.menu .menu_box .menu_card {
+   width: 225px;
+   height: 345px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   text-align: center;
+   padding-top: 10px;
+   margin-bottom: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+   border-radius: 5%;
+}
+
+.menu .menu_box .menu_card .menu_image {
+   width: 160px;
+   height: 170px;
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+   transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .menu_info h4 {
+   font-size: 20px;
+   color: #ba31fa;
+   margin: 10px 0;
+}
+
+.menu .menu_box .menu_card .menu_info p {
+   line-height: 18px;
+   margin-top: 8px;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+   font-size: 24px;
+   color: #333;
+   margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_btn {
+   height: 40px;
+   width: 130px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   background: #000000;
+   padding: 8px 10px;
+   margin: 10px auto;
+   transition: 0.3s;
+   border-radius: 3px;
+   text-decoration: none;
+}
+
+.menu .menu_box .menu_card .menu_btn:hover {
+   background: #9531fa;
+}
+

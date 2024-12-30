@@ -1,0 +1,42 @@
+
+.product-details {
+   text-align: center;
+   padding: 20px;
+}
+
+.product-details img {
+   width: 300px;
+   height: auto;
+}
+
+.product-details h1 {
+   font-size: 30px;
+   margin: 20px 0;
+}
+
+.product-details p {
+   font-size: 18px;
+   margin: 0 auto; /* Centre le paragraphe horizontalement */
+   padding: 20px;  /* Ajoute de l'espace interne */
+   line-height: 1.6;
+   text-align: left; /* Aligne le texte à gauche */
+   max-width: 600px; /* Limite la largeur pour un bon rendu */
+}
+
+.product-details h3 {
+   font-size: 24px;
+   color: #333;
+}
+
+.product-details .back-btn {
+   display: inline-block;
+   background-color: #9f31fa;
+   padding: 10px 20px;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px;
+}
+
+.product-details .back-btn:hover {
+   background-color: #aa44ff;
+}

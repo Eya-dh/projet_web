@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('image/back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+section nav .logo img{
+    height: 60px;
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #9f31fa;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #aa31fa;
+}
+
+/* Style de la barre de navigation */
+section nav .icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Style du formulaire de recherche */
+section nav .icon form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid #9f31fa; /* Bordure de couleur */
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+section nav .icon form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+section nav .icon form input[type="text"]:focus {
+    background-color: #f1f1f1; /* Changer la couleur de fond lorsqu'il est actif */
+}
+
+section nav .icon form button {
+    padding: 10px 13px;
+    border: none;
+    background-color: #9f31fa;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color 0.3s ease;
+}
+
+section nav .icon form button:hover {
+    background-color: #7a24b8; /* Changer la couleur au survol */
+}
+
+section nav .icon form button i {
+    font-size: 15px;
+
+}
+
+/* Effet au survol du champ de recherche */
+section nav .icon form input[type="text"]:focus + button {
+    background-color: #7a24b8; /* Changer la couleur du bouton au focus */
+}
+
+section nav .icon form input[type="text"]:focus {
+    border-color: #7a24b8; /* Changer la bordure au focus */
+}
+
+section nav .login-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #9f31fa; /* Violet */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 25px; /* Bouton arrondi */
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-left: 20px; /* Espace par rapport à la barre de navigation */
+}
+
+section nav .login-btn:hover {
+    background-color: #7a24b8; /* Violet plus foncé au survol */
+    transform: scale(1.05); /* Légère augmentation de taille */
+}
+
+section nav .login-btn .login {
+    color: white;              /* Texte en blanc */
+    background-color: #9f31fa; /* Fond violet */
+    padding: 10px 25px;        /* Espace autour du texte */
+    text-decoration: none;     /* Enlever le soulignement */
+    border-radius: 25px;       /* Bouton arrondi */
+    font-weight: bold;         /* Texte en gras */
+    transition: background-color 0.3s ease;
+}
+
+section nav .login-btn .login:hover {
+    background-color: #7a24b8; /* Changement de couleur au survol */
+}
+
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+section .main .men_text h1{
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+}
+
+section .main .men_text h1 span{
+    margin-left: 15px;
+    color: #9531fa;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+section .main .main_image img{
+    width: 500px;
+    height: 400px;
+    position: relative;
+    left: 70px;
+}
+
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 123px;
+    bottom: 120px;
+    line-height: 22px;
+}
+
+section .main_btn{
+    background: #9f31fa;
+    position: relative;
+    left: 123px;
+    bottom: 30px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 25px;
+}
+
+section .main_btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+section .main_btn i{
+    color: #fff;
+    transition: 0.3s;
+}
+
+section .main_btn:hover i{
+    transform: translateX(7px);
+}
+
+
+/*------------------------------------About----------------------------*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .image img{
+    width: 800px;
+    height: 425px;
+    position: relative;
+    right:  70px;
+    border-radius: 20px;
+}
+
+.about .about_main .about_text h1 span{
+    color: #9231fa;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+
+.about .about_main .about_text h3{
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+
+.about .about_btn{
+    background: #9f31fa;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: 55%;
+    bottom: 30px;
+}
+
+
+
+/*-----------------------------------Menu--------------------------------------------*/
+
+.menu{
+    width: 100%;
+    padding: 50px 3px;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: #9531fa;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #9f31fa;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    /* Remplacez "5" par "6" pour afficher 6 produits par ligne */
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes, modifiez selon vos besoins */
+    grid-gap: 15px; /* Espacement entre les cartes */
+    justify-items: center; /* Centre chaque produit horizontalement */
+}
+
+.menu .menu_box .menu_card{
+    width: 225px;
+    height: 345px;
+    display: flex;
+    flex-direction: column; /* Les éléments à l'intérieur en colonne */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    margin: auto; /* Centre la carte dans le conteneur */
+    text-align: center; /* Centre le texte */
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    border-radius: 5%;
+}
+
+
+.menu .menu_box .menu_card .menu_image{
+    width: 160px;
+    height: 170px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card{
+    width: 35px;
+    height: 15px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card{
+    position: relative;
+    top: -240px;
+    right: 10px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 100px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover{
+    color: #9931fa;
+}
+
+.menu .menu_box .menu_card .menu_info h4{
+    width: auto; /* Ajuste automatiquement la largeur */
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ba31fa;
+}
+
+.menu .menu_box .menu_card .menu_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 18px;
+}
+
+.menu .menu_box .menu_card .menu_info h3{
+    text-align: center; /* Centre le texte du h3 */
+    margin-top: 10px;
+    font-size: 24px; /* Ajustez la taille si besoin */
+    color: #333; /* Exemple de couleur */
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon{
+    color: #aa31fa;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn{
+    height:40px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000000;
+    padding: 8px 10px;
+    margin: 10px auto;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+/*------------------------------Footer------------------------------*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 70px;
+    background: #dfccfa;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #ad31fa;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #be31fa;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #b031fa;
+    border-radius: 15px;
+}

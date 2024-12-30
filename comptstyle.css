@@ -1,0 +1,386 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: #f4f4f9;
+   font-family: 'Arial', sans-serif;
+   height: 100vh;
+   display: block;
+   justify-content: center;
+   align-items: center;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 50px;
+   background: rgba(255, 255, 255, 0.9);
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
+
+nav .user-profile h3 span{
+   
+   font-size: 35px;
+   font-family: mv boli ,sans-serif;
+   display: flex;
+   align-items:flex-start;
+   justify-content:flex-start;
+   padding: 20px;
+
+}
+
+
+nav .logout-btn {
+   width: 40px;
+   height: 40px;
+   background: #ba31fa;
+   color: white;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+   text-decoration: none;
+   transition: background 0.3s, transform 0.3s;
+}
+
+nav .logout-btn:hover {
+   background: #ffffff;
+   transform: scale(1.1);
+}
+
+section#Home {
+   margin-top: 80px;
+}
+
+
+nav ul {
+   list-style: none;
+   display: flex;
+   gap: 30px;
+}
+
+nav ul li a {
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+   font-size: 18px;
+   transition: color 0.3s;
+}
+
+nav ul li a:hover {
+   color: #9531fa;
+}
+
+.logo img {
+   width: 100px;
+   height: 70px;
+}
+
+.icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+
+.icon form {
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 300px;
+   border-radius: 25px;
+   overflow: hidden;
+   border: 2px solid #9f31fa;
+   background-color: #fff;
+   transition: border-color 0.3s ease;
+}
+
+.icon form input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 22px;
+   outline: none;
+   font-size: 16px;
+   color: #333;
+   transition: background-color 0.3s ease;
+}
+
+.icon form input[type="text"]:focus {
+   background-color: #f1f1f1;
+}
+
+.icon form button {
+   padding: 10px 13px;
+   border: none;
+   background-color: #9f31fa;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 50%;
+   position: absolute;
+   right: 0;
+   top: 0;
+   transition: background-color 0.3s ease;
+}
+
+.icon form button:hover {
+   background-color: #7a24b8;
+}
+
+.icon form button i {
+   font-size: 15px;
+}
+
+.icon form input[type="text"]:focus + button {
+   background-color: #7a24b8;
+}
+
+.icon form input[type="text"]:focus {
+   border-color: #7a24b8;
+}
+
+.icon a,
+.icon button {
+   color: rgb(153, 0, 255);
+   font-size: 24px;
+   background: none;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: color 0.3s;
+}
+
+.icon a:hover,
+.icon button:hover {
+   color: #9531fa;
+}
+
+
+
+.container {
+   background: rgba(255, 255, 255, 0.9);
+   padding: 40px;
+   border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+   width:auto;
+   max-width: 100%;
+   margin-top: 50px;
+}
+
+
+.products {
+   width: 100%;
+   padding: 50px 3px;
+}
+
+.products h1.heading {
+   font-size: 55px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 30px;
+}
+
+.products h1.heading span {
+   color: #9531fa;
+   margin-left: 15px;
+   font-family: 'MV Boli', sans-serif;
+}
+
+.products h1.heading span::after {
+   content: '';
+   width: 100%;
+   height: 2px;
+   background: #9f31fa;
+   display: block;
+   position: relative;
+   bottom: 15px;
+}
+
+.products .box-container {
+   width: 95%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
+   justify-items: center;
+}
+
+.products .box-container .box {
+   width: 270px;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+   border-radius: 5%;
+   padding: 10px;
+   margin-bottom: 20px;
+   background: white;
+   transition: transform 0.3s ease;
+   position: relative;
+}
+
+.products .box-container .box .favorite-btn {
+   width: 35px;
+   height: 35px;
+   position: absolute;
+   top: 15px; /* Ajuste cette valeur pour le centrer verticalement */
+   right: 15px; /* Centré à droite */
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   border-radius: 50%;
+   background: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   font-size: 24px;
+   color: #9f31fa;
+   transition: color 0.3s ease;
+}
+
+.products .box-container .box favorite-btn.active i {
+   color: red; /* Couleur du cœur lorsqu'il est dans les favoris */
+}
+
+.products .box-container .box:hover .favorite-btn {
+   opacity: 1; /* Affichage lors du survol */
+}
+
+.products .box-container .box .favorite-btn i {
+   font-size: 25px;
+   color: #000;
+   cursor: pointer;
+   transition:color 0.3s ease;
+}
+
+.products .box-container .box .favorite-btn i:hover {
+   color: #9931fa; /* Couleur du cœur au survol */
+}
+
+
+.products .box-container .box:hover {
+   transform: translateY(-10px);
+}
+
+.products .box-container .box img {
+   width: 160px;
+   height: 170px;
+   object-fit: cover;
+   border-radius: 5%;
+   transition: transform 0.3s ease;
+}
+
+.products .box-container .box:hover img {
+   transform: scale(1.1);
+}
+
+.products .box-container .box .name {
+   font-size: 20px;
+   color: #ba31fa;
+   margin: 10px 0;
+}
+
+.products .box-container .box .price {
+   font-size: 24px;
+   color: #333;
+   margin: 10px 0;
+}
+
+.products .box-container .box input[type="number"] {
+   width: 60px;
+   padding: 5px;
+   text-align: center;
+   margin: 10px 0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.products .box-container .box .btn {
+   background: #000000;
+   color: white;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 3px;
+   transition: background 0.3s ease;
+   cursor: pointer;
+   border: none;
+}
+
+.products .box-container .box .btn:hover {
+   background: #9f31fa;
+}
+
+/* Pop-up Styles */
+.popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 9999;
+}
+
+.popup-content {
+   background: #fff;
+   padding: 40px; /* Augmenter la marge interne pour une fenêtre plus grande */
+   border-radius: 15px; /* Un rayon plus grand pour un coin plus arrondi */
+   text-align: center;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+   width: 400px; /* Largeur de la fenêtre pop-up */
+   max-width: 90%; /* Limite la largeur à 90% de la fenêtre */
+   max-height: 80%; /* Limite la hauteur à 80% de la fenêtre */
+   overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+
+.popup-content i {
+   font-size: 50px; /* Taille plus grande pour l'icône */
+   color: #4CAF50;
+}
+
+.popup-content p {
+   margin: 30px 0; /* Plus d'espacement autour du texte */
+   font-size: 20px; /* Texte plus grand */
+}
+
+.popup-content button {
+   background: #4CAF50;
+   color: white;
+   border: none;
+   padding: 12px 25px; /* Bouton plus grand */
+   border-radius: 8px; /* Coins arrondis du bouton */
+   cursor: pointer;
+   font-size: 16px; /* Augmente la taille du texte du bouton */
+}
+
+.popup-content button:hover {
+   background: #45a049;
+}

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Style for the Popup Message */
+.popup-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-message p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.popup-message .btn {
+  background-color: #fff;
+  color: #4CAF50;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.popup-message .btn:hover {
+  background-color: #45a049;
+}
+
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-box input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column .input-box {
+  width: 48%;
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.address .column {
+  flex-direction: column;
+}
+
+.select-box {
+  width: 100%;
+}
+
+.select-box select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  background: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #5a0c9e;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p a {
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #5a0c9e;
+}
+
